@@ -76,9 +76,9 @@ export class ApiService {
           const data = {
             refresh: userData.state.token.refresh,
           };
-          const rs = await this.axiosInstance.post(url.RefreshTokenURL(), data);
+          // const rs = await this.axiosInstance.post(url.RefreshTokenURL(), data);
 
-          userData.state.token = rs.data;
+          // userData.state.token = rs.data;
           localStorage.setItem("user-login", JSON.stringify(userData));
 
           return this.axiosInstance(originalConfig);
