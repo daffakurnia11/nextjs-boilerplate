@@ -45,7 +45,7 @@ export default function Heading({
   return (
     <Component
       {...props}
-      className={`font-text font-semibold ${textSizeClass} ${className}`}
+      className={`typography-heading ${textSizeClass} ${className}`}
     >
       {children}
     </Component>

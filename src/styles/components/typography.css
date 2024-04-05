@@ -1,0 +1,11 @@
+.typography-display {
+  @apply font-display font-bold;
+}
+
+.typography-heading {
+  @apply font-text font-semibold;
+}
+
+.typography-text {
+  @apply font-text font-normal;
+}

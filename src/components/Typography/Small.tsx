@@ -28,7 +28,7 @@ export default function Small({
   return (
     <Component
       {...props}
-      className={`font-text font-normal ${textSizeClass} ${className}`}
+      className={`typography-text ${textSizeClass} ${className}`}
     >
       {children}
     </Component>

@@ -30,7 +30,7 @@ export default function Display({
   return (
     <Component
       {...props}
-      className={`font-display font-bold ${textSizeClass} ${className}`}
+      className={`typography-display ${textSizeClass} ${className}`}
     >
       {children}
     </Component>
