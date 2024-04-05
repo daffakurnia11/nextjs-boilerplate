@@ -1,0 +1,101 @@
+import { Canvas, Controls, Meta, Stories } from "@storybook/blocks";
+import Display from "../../../components/Typography/Display";
+
+import * as DisplayStories from "./Display.stories";
+
+<Meta of={DisplayStories} />
+
+# Display Typography
+
+The `Display` component is designed to provide a consistent typography hierarchy across your application. This component generally allows the level of heading from `h1` to `h3`, but it can be changed for flexible usage in different contexts in the various levels of heading (from `h1` to `h6`, or other HTML Tag).
+
+## Usage
+
+The `Display` component can be used to insert text with heading styles into your application with different font family based on the font branding of the application. It's crucial for maintaining a semantic and accessible document structure.
+
+```jsx
+<Typography.Display
+  size="lg"
+  as="h1"
+  className="text-black"
+  styles={{ textAlign: "center" }}
+>
+  This is an H1 Display Heading
+</Typography.Display>
+```
+
+## Default Styling
+
+By default, the `Display` component uses the following styles:
+
+```
+font-family: "Merriweather", serif;
+font-weight: 700;
+font-size: 3rem; // 48px
+line-height: 140%;
+```
+
+These styles are applied to match the size of the heading, with `lg` being the largest and most prominent, `base` being the default size, and `sm` being the smallest.
+
+## How to Use the Component
+
+To use the `Display` component, simply import it into your component file based on the group of the component, and then use it like any other React component. In this case, the group of `Display` component is `Typography`. You can specify the `size` prop to determine which heading size you want (`lg`, `base`, `sm`) and also `as` prop to determine the hierarchy (from `h1` to `h6`):
+
+```jsx
+import Typography from "@/components/Typography";
+
+export const MyComponent = () => (
+  <div>
+    <Typography.Display size="lg" as="h1">
+      This is an H1 Display Heading with large size
+    </Typography.Display>
+    // Other content
+  </div>
+);
+```
+
+## Variants
+
+The `Display` component supports various sizes of display headings, which can be specified using the `size` prop. The available variants are `lg`, `base`, and `sm`.
+
+<Canvas />
+<Controls />
+
+### Display Large
+
+This section showcases an example of the `Display` component at size `lg`, along with its default styling. The component utilizes the `.text-8xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={DisplayStories.Large} />
+
+```
+font-family: "Merriweather", sans-serif;
+font-weight: 700;
+font-size: 3.5rem; // 56px
+line-height: 140%;
+```
+
+### Display Base
+
+This section showcases an example of the `Display` component at size `base`, along with its default styling. The component utilizes the `.text-7xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={DisplayStories.Base} />
+
+```
+font-family: "Merriweather", sans-serif;
+font-weight: 700;
+font-size: 3rem; // 48px
+line-height: 140%;
+```
+
+### Display Small
+
+This section showcases an example of the `Display` component at size `sm`, along with its default styling. The component utilizes the `.text-6xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={DisplayStories.Small} />
+
+```
+font-family: "Merriweather", sans-serif;
+font-weight: 700;
+font-size: 2.25rem; // 36px
+line-height: 140%;
+```
