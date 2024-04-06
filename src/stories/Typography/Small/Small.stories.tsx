@@ -2,7 +2,7 @@ import Small from "../../../components/Typography/Small";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Small> = {
-  title: "Typography/Small",
+  title: "Component/Typography/Small",
   component: Small,
 };
 
