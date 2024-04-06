@@ -1,0 +1,101 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Primary from "../../../components/Button/Primary";
+
+import * as PrimaryStories from "./Primary.stories";
+import { Small } from "../../Typography/Display/Display.stories";
+
+<Meta of={PrimaryStories} />
+
+# Primary Button
+
+The `Primary` button is a component for creating the primary button of the application. It is designed to get users' attention and call them to take actions. The usage is very general, could be as the form submission, calling any actions, triggering any modals or popups, and other interactive elements of the application.
+
+<Canvas />
+<Controls />
+
+## Basic Usage
+
+The `Primary` button can be easily implemented within your application to facilitate main actions. Its usage is straightforward, supporting different sizes (`lg`, `base`, and `sm`) and states (like `disabled` or `fullWidth`), and allowing to add an icon inside of the button to accommodate various design needs and increase the user experience.
+
+```jsx
+<Button.Primary size="base" variant="default">
+  Button
+</Button.Primary>
+```
+
+## How to Use the Component
+
+The `Primary` button are extended from `Button` component, that makes the writing code are maintainable and clean. The button are only imported once, without specify which variant of the button that want to use. Give the label of the button and also the additional properties such as `size`, `disabled`, `fullWidth` or anything else.
+
+```jsx
+import Button from "@/components/Button";
+
+export const MyComponent = () => (
+  <div>
+    <Button.Primary
+      size="base"
+      variant="default"
+      disabled={false}
+      fullWidth={false}
+    >
+      Button
+    </Button.Primary>
+    // Other content
+  </div>
+);
+```
+
+## Default Styling
+
+The default styles of the `Primary` button contains of the placement of the label, padding of the button, and the style of the border. It also supports the transition effects for hovering and clicking.
+
+```
+display: flex;
+align-items: center;
+justify-content: center;
+
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 300ms;
+
+border-radius: 0.25rem;
+border-width: 1px;
+border-style: solid;
+```
+
+### Primary Button Styling
+
+The `Primary` button has a default background color and default border color for standardize the style of the button. Generally, the `Primary` button used the `.bg-primary-700` and `.border-primary-700` class from **TailwindCSS** for adding the color based, as specified in `tailwind.config.ts`.
+
+```
+border-color: #1D4ED8;
+background-color: #1D4ED8;
+```
+
+### Primary Button Hovered Styling
+
+While hovering, the color is changed to be darker using `.bg-primary-800` and `.border-primary-800` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+```
+border-color: #1E40AF;
+background-color: #1E40AF;
+```
+
+### Primary Button Active Styling
+
+While being pressed, the color is changed to be darker than before using `.bg-primary-900` and `.border-primary-900` class from **TailwindCSS**, as specified in `tailwind.config.ts`. There is also an outline color that using `.ring-primary-300`.
+
+```
+border-color: #1E3A8A;
+background-color: #1E3A8A;
+```
+
+### Primary Button Disabled Styling
+
+While the button has a disabled state, the opacity of the button has been changed to be 70% from the solid style.
+
+```
+border-color: #1D4ED8;
+background-color: #1D4ED8;
+opacity: 0.7;
+```

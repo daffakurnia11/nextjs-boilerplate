@@ -1,0 +1,167 @@
+import { AiOutlinePlus } from "react-icons/ai";
+import Primary from "../../../components/Button/Primary";
+import { Meta, StoryObj } from "@storybook/react";
+
+const meta: Meta<typeof Primary> = {
+  title: "Component/Button/Primary",
+  component: Primary,
+};
+
+export default meta;
+type Story = StoryObj<typeof Primary>;
+
+export const Example: Story = {
+  args: {
+    children: "Button",
+    size: "lg",
+    type: "default",
+    iconOnly: false,
+    disabled: false,
+    fullWidth: false,
+    as: "button",
+    prefix: <AiOutlinePlus />,
+    suffix: <AiOutlinePlus />,
+    placement: "center",
+    className: "",
+    style: {},
+  },
+};
+
+// Size Variants
+export const Large: Story = {
+  args: {
+    ...Example.args,
+    size: "lg",
+  },
+};
+
+export const Base: Story = {
+  args: {
+    ...Example.args,
+    size: "base",
+  },
+};
+
+export const Small: Story = {
+  args: {
+    ...Example.args,
+    size: "sm",
+  },
+};
+
+// Icon Placements
+export const WithPrefixIcon: Story = {
+  args: {
+    ...Example.args,
+    children: "Prefix Icon",
+    prefix: <AiOutlinePlus />,
+  },
+};
+
+export const WithSuffixIcon: Story = {
+  args: {
+    ...Example.args,
+    children: "Suffix Icon",
+    suffix: <AiOutlinePlus />,
+  },
+};
+
+export const WithPrefixAndSuffixIcon: Story = {
+  args: {
+    ...Example.args,
+    children: "Prefix & Suffix Icon",
+    prefix: <AiOutlinePlus />,
+    suffix: <AiOutlinePlus />,
+  },
+};
+
+export const IconInCenter: Story = {
+  args: {
+    ...Example.args,
+    children: "Center Icon",
+    prefix: <AiOutlinePlus />,
+    suffix: <AiOutlinePlus />,
+    fullWidth: true,
+    placement: "center",
+  },
+  render: (args) => (
+    <div style={{ width: 400 }}>
+      <Primary {...args} />
+    </div>
+  ),
+};
+
+export const IconInBetween: Story = {
+  args: {
+    ...Example.args,
+    children: "Between Icon",
+    prefix: <AiOutlinePlus />,
+    suffix: <AiOutlinePlus />,
+    fullWidth: true,
+    placement: "between",
+  },
+  render: (args) => (
+    <div style={{ width: 400 }}>
+      <Primary {...args} />
+    </div>
+  ),
+};
+
+// Button Variants
+export const ButtonDefault: Story = {
+  args: {
+    ...Example.args,
+    children: "Button Default",
+    size: "lg",
+    type: "default",
+  },
+};
+
+export const ButtonOutline: Story = {
+  args: {
+    ...Example.args,
+    children: "Button Outline",
+    size: "lg",
+    type: "outline",
+  },
+};
+
+export const ButtonTextOnly: Story = {
+  args: {
+    ...Example.args,
+    children: "Button Text Only",
+    size: "lg",
+    type: "text",
+  },
+};
+
+// Button Variants
+export const IconOnlyDefault: Story = {
+  args: {
+    ...Example.args,
+    children: <AiOutlinePlus />,
+    iconOnly: true,
+    size: "lg",
+    type: "default",
+  },
+};
+
+export const IconOnlyOutline: Story = {
+  args: {
+    ...Example.args,
+    children: <AiOutlinePlus />,
+    iconOnly: true,
+    size: "lg",
+    type: "outline",
+  },
+};
+
+export const IconOnlyTextOnly: Story = {
+  args: {
+    ...Example.args,
+    children: <AiOutlinePlus />,
+    iconOnly: true,
+    size: "lg",
+    type: "text",
+  },
+};

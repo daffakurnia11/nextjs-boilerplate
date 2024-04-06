@@ -1,0 +1,55 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Primary from "../../../components/Button/Primary";
+
+import * as PrimaryStories from "./Primary.stories";
+import { Small } from "../../Typography/Display/Display.stories";
+
+<Meta of={PrimaryStories} />
+
+# Primary Button
+
+## Button Type Variants
+
+The `Primary` button also has some types to ensure it fits the design requirements of the application. The type can be as `default` button that has a background color and border color, `outline` button that only has a border color, and `text` button that does not have a background color and border color.
+
+### Default Button
+
+The `default` button type has a background color and border color that using `.bg-primary-700` and `.border-primary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={PrimaryStories.ButtonDefault} />
+
+<Source
+  code={`
+<Button.Primary size="lg" type="default">
+  Button Default
+</Button.Primary>
+`}
+/>
+
+### Outline Button
+
+The `outline` button type has a transparent background color and border color that using `.bg-transparent` and `.border-primary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={PrimaryStories.ButtonOutline} />
+
+<Source
+  code={`
+<Button.Primary size="lg" type="outline">
+  Button Outline
+</Button.Primary>
+`}
+/>
+
+### Text-only Button
+
+The `text` button type has a transparent background color and transparent border color that using `.bg-transparent` and `.border-transparent` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={PrimaryStories.ButtonTextOnly} />
+
+<Source
+  code={`
+<Button.Primary size="lg" type="text">
+  Button Text Only
+</Button.Primary>
+`}
+/>

@@ -1,0 +1,83 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Primary from "../../../components/Button/Primary";
+
+import * as PrimaryStories from "./Primary.stories";
+import { Small } from "../../Typography/Display/Display.stories";
+
+<Meta of={PrimaryStories} />
+
+# Primary Button
+
+## Icon Placements
+
+The `Primary` button also supports for placing additional icon in the label of the button. The placement can be added as the prefix icon or suffix icon. This component supports the **React Icons** library for generating the icon.
+
+### With Prefix Icon
+
+The placement of the icon is in the front of the label of the button.
+
+<Canvas of={PrimaryStories.WithPrefixIcon} />
+
+<Source
+  code={`
+<Button.Primary size="lg" prefix={<AiOutlinePlus />}>
+  Prefix Icon
+</Button.Primary>
+`}
+/>
+
+### With Suffix Icon
+
+The placement of the icon is in the end of the label of the button.
+
+<Canvas of={PrimaryStories.WithSuffixIcon} />
+
+<Source
+  code={`
+<Button.Primary size="lg" suffix={<AiOutlinePlus />}>
+  Suffix Icon
+</Button.Primary>
+`}
+/>
+
+### With Prefix and Suffix Icon
+
+The placement of the icon is in the front and the end of the label of the button.
+
+<Canvas of={PrimaryStories.WithPrefixAndSuffixIcon} />
+
+<Source
+  code={`
+<Button.Primary size="lg" prefix={<AiOutlinePlus />} suffix={<AiOutlinePlus />}>
+  Prefix & Suffix Icon
+</Button.Primary>
+`}
+/>
+
+### Icon in Center
+
+The placement of the icon is in the center which are positioned near the label of the button. The button must have a `fullWidth` property to make the icon visualize properly.
+
+<Canvas of={PrimaryStories.IconInCenter} />
+
+<Source
+  code={`
+<Button.Primary size="lg" fullWidth={true} placement="center" prefix={<AiOutlinePlus />} suffix={<AiOutlinePlus />}>
+  Center Icon
+</Button.Primary>
+`}
+/>
+
+### Icon in Between
+
+The placement of the icon is in the left or right of the button which are positioned far from the label of the button. The button must have a `fullWidth` property to make the icon visualize properly.
+
+<Canvas of={PrimaryStories.IconInBetween} />
+
+<Source
+  code={`
+<Button.Primary size="lg" fullWidth={true} placement="between" prefix={<AiOutlinePlus />} suffix={<AiOutlinePlus />}>
+  Center Icon
+</Button.Primary>
+`}
+/>

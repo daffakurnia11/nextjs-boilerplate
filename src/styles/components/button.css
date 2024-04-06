@@ -1,0 +1,71 @@
+/* Default Variant */
+.button {
+  @apply flex gap-2 justify-center items-center rounded transition-all duration-300 border border-solid enabled:active:ring-2 enabled:active:ring-primary-300 disabled:cursor-not-allowed disabled:opacity-70;
+}
+
+.button span {
+  @apply transition-all duration-300;
+}
+
+.button-icon {
+  @apply rounded-full gap-0;
+}
+
+/* Button Sizes */
+.button.button-lg:not(.button-icon) {
+  @apply py-2.5 px-6;
+}
+
+.button.button-base:not(.button-icon) {
+  @apply py-2 px-5;
+}
+
+.button.button-sm:not(.button-icon) {
+  @apply py-1.5 px-3;
+}
+
+/* Button Icon Sizes */
+.button.button-lg.button-icon {
+  @apply p-2.5;
+}
+
+.button.button-base.button-icon {
+  @apply p-2;
+}
+
+.button.button-sm.button-icon {
+  @apply p-1.5;
+}
+
+/* Primary Color Style */
+.button.button-primary {
+  @apply border-primary-700 bg-primary-700 enabled:hover:border-primary-800 enabled:hover:bg-primary-800 enabled:active:border-primary-900 enabled:active:bg-primary-900;
+}
+
+.button-outline.button-primary {
+  @apply border-primary-700 bg-transparent enabled:hover:border-primary-500 enabled:hover:bg-primary-500 enabled:active:border-primary-700 enabled:active:bg-transparent;
+}
+
+.button-text.button-primary {
+  @apply border-transparent bg-transparent enabled:hover:border-transparent enabled:hover:bg-transparent enabled:active:border-transparent enabled:active:bg-transparent;
+}
+
+/* Text Color */
+.button.button-primary span,
+.button-outline.button-primary:hover span {
+  @apply text-white;
+}
+
+.button-outline.button-primary span,
+.button-outline.button-primary:active span,
+.button-text.button-primary span {
+  @apply text-primary-700;
+}
+
+.button-text.button-primary:hover span {
+  @apply text-primary-800;
+}
+
+.button-text.button-primary:active span {
+  @apply text-primary-900;
+}
