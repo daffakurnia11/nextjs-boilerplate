@@ -10,11 +10,11 @@ import { Small } from "../../Typography/Display/Display.stories";
 
 ## Icon Placements
 
-The `Primary` button also supports for placing additional icon in the label of the button. The placement can be added as the prefix icon or suffix icon. This component supports the **React Icons** library for generating the icon.
+The `Primary` button also supports for placing additional icon in the label of the button. The placement can be added as the prefix icon or suffix icon. This component supports the **React Icons** library for generating the icon and puts into the `prefix` and/or `suffix` properties.
 
 ### With Prefix Icon
 
-The placement of the icon is in the front of the label of the button.
+This section showcases an example of the `Primary` button component with `prefix` prop, along with its icon from **React Icons** library. The placement of the icon is in the front of the label of the button.
 
 <Canvas of={PrimaryStories.WithPrefixIcon} />
 
@@ -28,7 +28,7 @@ The placement of the icon is in the front of the label of the button.
 
 ### With Suffix Icon
 
-The placement of the icon is in the end of the label of the button.
+This section showcases an example of the `Primary` button component with `suffix` prop, along with its icon from **React Icons** library. The placement of the icon is in the end of the label of the button.
 
 <Canvas of={PrimaryStories.WithSuffixIcon} />
 
@@ -42,7 +42,7 @@ The placement of the icon is in the end of the label of the button.
 
 ### With Prefix and Suffix Icon
 
-The placement of the icon is in the front and the end of the label of the button.
+This section showcases an example of the `Primary` button component with `prefix` and `suffix` props, along with its icon from **React Icons** library. The placement of the icon is in the front and the end of the label of the button.
 
 <Canvas of={PrimaryStories.WithPrefixAndSuffixIcon} />
 
@@ -56,7 +56,7 @@ The placement of the icon is in the front and the end of the label of the button
 
 ### Icon in Center
 
-The placement of the icon is in the center which are positioned near the label of the button. The button must have a `fullWidth` property to make the icon visualize properly.
+This section showcases an example of the `Primary` button component with `fullWidth` prop to determine the button has a full width size, and `placement` props to configure the placement of the icon. The placement of the icon is in the center which are positioned near the label of the button.
 
 <Canvas of={PrimaryStories.IconInCenter} />
 
@@ -70,7 +70,7 @@ The placement of the icon is in the center which are positioned near the label o
 
 ### Icon in Between
 
-The placement of the icon is in the left or right of the button which are positioned far from the label of the button. The button must have a `fullWidth` property to make the icon visualize properly.
+This section showcases an example of the `Primary` button component with `fullWidth` prop to determine the button has a full width size, and `placement` props to configure the placement of the icon. The placement of the icon is in the left or right of the button which are positioned far from the label of the button.
 
 <Canvas of={PrimaryStories.IconInBetween} />
 
@@ -81,3 +81,7 @@ The placement of the icon is in the left or right of the button which are positi
 </Button.Primary>
 `}
 />
+
+<div style={{ textAlign: "right" }}>
+  [Button Type Variants](/docs/component-button-primary--button-type-variants) >
+</div>

@@ -32,6 +32,8 @@ export const Large: Story = {
   args: {
     ...Example.args,
     size: "lg",
+    prefix: null,
+    suffix: null,
   },
 };
 
@@ -39,6 +41,8 @@ export const Base: Story = {
   args: {
     ...Example.args,
     size: "base",
+    prefix: null,
+    suffix: null,
   },
 };
 
@@ -46,6 +50,8 @@ export const Small: Story = {
   args: {
     ...Example.args,
     size: "sm",
+    prefix: null,
+    suffix: null,
   },
 };
 
@@ -55,6 +61,7 @@ export const WithPrefixIcon: Story = {
     ...Example.args,
     children: "Prefix Icon",
     prefix: <AiOutlinePlus />,
+    suffix: null,
   },
 };
 
@@ -62,6 +69,7 @@ export const WithSuffixIcon: Story = {
   args: {
     ...Example.args,
     children: "Suffix Icon",
+    prefix: null,
     suffix: <AiOutlinePlus />,
   },
 };
@@ -114,6 +122,8 @@ export const ButtonDefault: Story = {
     children: "Button Default",
     size: "lg",
     type: "default",
+    prefix: null,
+    suffix: null,
   },
 };
 
@@ -123,6 +133,8 @@ export const ButtonOutline: Story = {
     children: "Button Outline",
     size: "lg",
     type: "outline",
+    prefix: null,
+    suffix: null,
   },
 };
 
@@ -132,6 +144,8 @@ export const ButtonTextOnly: Story = {
     children: "Button Text Only",
     size: "lg",
     type: "text",
+    prefix: null,
+    suffix: null,
   },
 };
 
