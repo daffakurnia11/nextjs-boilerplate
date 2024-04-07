@@ -9,22 +9,27 @@ const meta: Meta<typeof Paragraph> = {
 export default meta;
 type Story = StoryObj<typeof Paragraph>;
 
-export const Base: Story = {
+export const Example: Story = {
   args: {
+    children: "Paragraph",
     size: "base",
     as: "p",
-    children: "Paragraph Base",
     className: "",
     style: {},
+  },
+};
+export const Base: Story = {
+  args: {
+    ...Example.args,
+    size: "base",
+    children: "Paragraph Base",
   },
 };
 
 export const Small: Story = {
   args: {
+    ...Example.args,
     size: "sm",
-    as: "p",
     children: "Paragraph Small",
-    className: "",
-    style: {},
   },
 };

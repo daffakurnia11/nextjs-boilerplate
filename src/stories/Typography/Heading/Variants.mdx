@@ -1,0 +1,96 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Heading from "../../../components/Typography/Heading";
+
+import * as HeadingStories from "./Heading.stories";
+
+<Meta of={HeadingStories} />
+
+# Heading Typography
+
+## Variants
+
+The `Heading` component supports various levels and sizes of headings, which can be specified using the `level` prop. The available variants are `1`, `2`, `3`, `4`, `5`, and `6`.
+
+### Heading 1
+
+This section showcases an example of the `Heading` component at level `1`, along with its default styling. The component utilizes the `.text-5xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={HeadingStories.Heading1} />
+
+<Source
+  code={`
+<Typography.Heading as="h1" level={1}>
+  Heading 1
+</Typography.Heading>
+`}
+/>
+
+### Heading 2
+
+This section showcases an example of the `Heading` component at level `2`, along with its default styling. The component utilizes the `.text-4xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={HeadingStories.Heading2} />
+
+<Source
+  code={`
+<Typography.Heading as="h2" level={2}>
+  Heading 2
+</Typography.Heading>
+`}
+/>
+
+### Heading 3
+
+This section showcases an example of the `Heading` component at level `3`, along with its default styling. The component utilizes the `.text-3xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={HeadingStories.Heading3} />
+
+<Source
+  code={`
+<Typography.Heading as="h3" level={3}>
+  Heading 3
+</Typography.Heading>
+`}
+/>
+
+### Heading 4
+
+This section showcases an example of the `Heading` component at level `4`, along with its default styling. The component utilizes the `.text-2xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={HeadingStories.Heading4} />
+
+<Source
+  code={`
+<Typography.Heading as="h4" level={4}>
+  Heading 4
+</Typography.Heading>
+`}
+/>
+
+### Heading 5
+
+This section showcases an example of the `Heading` component at level `5`, along with its default styling. The component utilizes the `.text-xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={HeadingStories.Heading5} />
+
+<Source
+  code={`
+<Typography.Heading as="h5" level={5}>
+  Heading 5
+</Typography.Heading>
+`}
+/>
+
+### Heading 6
+
+This section showcases an example of the `Heading` component at level `6`, along with its default styling. The component utilizes the `.text-lg` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={HeadingStories.Heading6} />
+
+<Source
+  code={`
+<Typography.Heading as="h6" level={6}>
+  Heading 6
+</Typography.Heading>
+`}
+/>

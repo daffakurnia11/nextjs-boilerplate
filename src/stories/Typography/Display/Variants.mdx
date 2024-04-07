@@ -1,0 +1,54 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Display from "../../../components/Typography/Display";
+
+import * as DisplayStories from "./Display.stories";
+
+<Meta of={DisplayStories} />
+
+# Display Typography
+
+## Variants
+
+The `Display` component supports various sizes of display headings, which can be specified using the `size` prop. The available variants are `lg`, `base`, and `sm`.
+
+### Display Large
+
+This section showcases an example of the `Display` component at size `lg`, along with its default styling. The component utilizes the `.text-8xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={DisplayStories.Large} />
+
+<Source
+  code={`
+<Typography.Display as="h1" size="lg">
+  Display Large
+</Typography.Display>
+`}
+/>
+
+### Display Base
+
+This section showcases an example of the `Display` component at size `base`, along with its default styling. The component utilizes the `.text-7xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={DisplayStories.Base} />
+
+<Source
+  code={`
+<Typography.Display as="h2" size="base">
+  Display Base
+</Typography.Display>
+`}
+/>
+
+### Display Small
+
+This section showcases an example of the `Display` component at size `sm`, along with its default styling. The component utilizes the `.text-6xl` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={DisplayStories.Small} />
+
+<Source
+  code={`
+<Typography.Display as="h3" size="sm">
+  Display Small
+</Typography.Display>
+`}
+/>

@@ -6,17 +6,17 @@ import type { TextProps } from "@/types/components/Typography";
  * @param {React.ReactNode} children
  * - The content of the component for the Paragraph component. - Required
  * @param {base|sm} [size='base']
- * - The level of the Paragraph component. Can be base or sm. Default is base - Optional
+ * - The level of the Paragraph component. Can be base or sm. Default is base. - Optional
  * @param {keyof JSX.IntrinsicElements} [as='p']
- * - The HTML tag to use for the component. Can be p, span, or small. - Optional
+ * - The HTML tag to use for the component. Can be p, span, or small. Default is p. - Optional
  * @param {string} [className='']
  * - The className of the component for adding custom styles from TailwindCSS. - Optional
  * @returns {React.ReactElement} The Paragraph component with the appropriate HTML tag, styling, and content.
  */
 export default function Paragraph({
-  size,
-  as: Component = "p",
   children,
+  size = "base",
+  as: Component = "p",
   className = "",
   ...props
 }: TextProps): React.ReactElement {

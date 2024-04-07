@@ -1,0 +1,62 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Paragraph from "../../../components/Typography/Paragraph";
+
+import * as ParagraphStories from "./Paragraph.stories";
+
+<Meta of={ParagraphStories} />
+
+# Paragraph Typography
+
+The `Paragraph` component is design to provide the text style across your application with a consistent typography hierarcy. This component generally uses the `p` HTML element, but it can be changed using `span` or `small` for flexible usage in different context of the application.
+
+<Canvas />
+<Controls />
+
+## Basic Usage
+
+The `Paragraph` component can be used to insert text with paragraphy or body text styles into your application. It's crucial for maintaining a semantic and accessible document structure.
+
+<Source
+  code={`
+<Typography.Paragraph
+  size="base"
+  as="p"
+  className="text-black"
+  styles={{ textAlign: "center" }}
+>
+  Lorem ipsum dolor sit amet.
+</Typography.Paragraph>
+`}
+/>
+
+## How to Use the Component
+
+The `Paragraph` component is extended from `Typography` component, that makes the writing codes are maintainable and clean. The `Typography` component is only imported once, without specify which variant of the typography that want to use. You can specify the `size` prop to determine which heading size you want (`base` and `sm`) and also `as` prop to determine the HTML tag that fits to the application.
+
+<Source code={`
+import Typography from "@/components/Typography";
+
+export const MyComponent = () => (
+  <div>
+    <Typography.Paragraph level="base" as="p">
+      This is a paragraph text with the default size
+    </Typography.Paragraph>
+    // Other content
+  </div>
+);
+`} />
+
+## Default Styling
+
+The default styles of the `Paragraph` component contains of the font family of the text by using **Poppins**, the font weight using `normal`, and `140%` line height.
+
+```css
+font-family: "Poppins", sans-serif;
+font-weight: 400;
+font-size: 1rem; // 16px as default size
+line-height: 140%;
+```
+
+<div style={{ textAlign: "right" }}>
+  [Variants](/docs/component-typography-paragraph--variants) >
+</div>

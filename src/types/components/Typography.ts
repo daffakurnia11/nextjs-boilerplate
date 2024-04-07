@@ -8,7 +8,7 @@ export interface DisplayProps {
    */
   size?: "lg" | "base" | "sm";
   /**
-   * The HTML tag to use for the component. Can be h1, h2, h3, h4, h5, or h6. - Optional
+   * The HTML tag to use for the component. Can be h1, h2, h3, h4, h5, or h6. Default is h1. - Optional
    */
   as?: keyof JSX.IntrinsicElements;
   /**
@@ -27,11 +27,11 @@ export interface HeadingProps {
    */
   children: React.ReactNode;
   /**
-   * The level of the Heading component. Can be 1, 2, 3, 4, 5, or 6. - Required
+   * The level of the Heading component. Can be 1, 2, 3, 4, 5, or 6. Default is 1 - Optional
    */
-  level: 1 | 2 | 3 | 4 | 5 | 6;
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
   /**
-   * The HTML tag to use for the component. Can be h1, h2, h3, h4, h5, or h6. - Optional
+   * The HTML tag to use for the component. Can be h1, h2, h3, h4, h5, or h6. Default is h1. - Optional
    */
   as?: keyof JSX.IntrinsicElements;
   /**
@@ -50,7 +50,7 @@ export interface TextProps {
    */
   children: React.ReactNode;
   /**
-   * The size of the Paragraph component. Can be base or sm. - Required
+   * The size of the Paragraph component. Can be base or sm. Default is base. - Optional
    */
   size?: "base" | "sm";
   /**

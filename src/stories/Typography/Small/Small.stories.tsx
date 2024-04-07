@@ -9,22 +9,28 @@ const meta: Meta<typeof Small> = {
 export default meta;
 type Story = StoryObj<typeof Small>;
 
-export const TextSmall: Story = {
+export const Example: Story = {
   args: {
-    size: "base",
-    as: "p",
     children: "Text Small",
+    size: "base",
+    as: "small",
     className: "",
     style: {},
   },
 };
 
+export const TextSmall: Story = {
+  args: {
+    ...Example.args,
+    size: "base",
+    children: "Text Small",
+  },
+};
+
 export const TextExtraSmall: Story = {
   args: {
+    ...Example.args,
     size: "sm",
-    as: "p",
     children: "Text Extra Small",
-    className: "",
-    style: {},
   },
 };

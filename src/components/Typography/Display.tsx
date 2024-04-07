@@ -8,15 +8,15 @@ import type { DisplayProps } from "@/types/components/Typography";
  * @param {lg|base|sm} [size='base']
  * - The level of the Display component. Can be lg, base, or sm. Default is base. - Optional
  * @param {keyof JSX.IntrinsicElements} [as='h1']
- * - The HTML tag to use for the component. Can be h1, h2, h3, h4, h5, or h6. - Optional
+ * - The HTML tag to use for the component. Can be h1, h2, h3, h4, h5, or h6. Default is h1. - Optional
  * @param {string} [className='']
  * - The className of the component for adding custom styles from TailwindCSS. - Optional
  * @returns {React.ReactElement} The Display component with the appropriate HTML tag, styling, and content.
  */
 export default function Display({
-  size,
-  as,
   children,
+  size = "base",
+  as = "h1",
   className = "",
   ...props
 }: DisplayProps): React.ReactElement {

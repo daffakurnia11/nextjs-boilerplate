@@ -16,32 +16,39 @@ const meta: Meta<typeof Display> = {
 export default meta;
 type Story = StoryObj<typeof Display>;
 
+export const Example: Story = {
+  args: {
+    children: "Display Large",
+    size: "lg",
+    as: "h1",
+    className: "",
+    style: {},
+  },
+};
+
 export const Large: Story = {
   args: {
+    ...Example.args,
     size: "lg",
     as: "h1",
     children: "Display Large",
-    className: "",
-    style: {},
   },
 };
 
 export const Base: Story = {
   args: {
+    ...Example.args,
     size: "base",
     as: "h2",
     children: "Display Base",
-    className: "",
-    style: {},
   },
 };
 
 export const Small: Story = {
   args: {
+    ...Example.args,
     size: "sm",
     as: "h3",
     children: "Display Small",
-    className: "",
-    style: {},
   },
 };

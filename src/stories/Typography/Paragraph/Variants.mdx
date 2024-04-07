@@ -1,0 +1,40 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Paragraph from "../../../components/Typography/Paragraph";
+
+import * as ParagraphStories from "./Paragraph.stories";
+
+<Meta of={ParagraphStories} />
+
+# Paragraph Typography
+
+## Variants
+
+The `Paragraph` component supports various sizes of text, which can be specified using the `size` prop. The available variants are `base` and `sm`.
+
+### Paragraph Base
+
+This section showcases an example of the `Paragraph` component at size `base`, along with its default styling. The component utilizes the `.text-base` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={ParagraphStories.Base} />
+
+<Source
+  code={`
+<Typography.Paragraph as="p" size="base">
+  Paragraph Base
+</Typography.Paragraph>
+`}
+/>
+
+### Paragraph Small
+
+This section showcases an example of the `Paragraph` component at size `sm`, along with its default styling. The component utilizes the `.text-sm` class from **TailwindCSS** for its font size, as specified in `tailwind.config.ts`.
+
+<Canvas of={ParagraphStories.Small} />
+
+<Source
+  code={`
+<Typography.Paragraph as="p" size="sm">
+  Paragraph Small
+</Typography.Paragraph>
+`}
+/>

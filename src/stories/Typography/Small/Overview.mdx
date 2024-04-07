@@ -1,0 +1,62 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Small from "../../../components/Typography/Small";
+
+import * as SmallStories from "./Small.stories";
+
+<Meta of={SmallStories} />
+
+# Small Typography
+
+The `Small` component is design to provide the text style across your application with a consistent typography hierarcy. This component generally uses the `small` HTML element, but it can be changed using `span` or `p` for flexible usage in different context of the application.
+
+<Canvas />
+<Controls />
+
+## Basic Usage
+
+The `Small` component can be used to insert text with small text styles into your application. It's crucial for maintaining a semantic and accessible document structure.
+
+<Source
+  code={`
+<Typography.Small
+  size="base"
+  as="small"
+  className="text-black"
+  styles={{ textAlign: "center" }}
+>
+  Lorem ipsum dolor sit amet.
+</Typography.Small>
+`}
+/>
+
+## How to Use the Component
+
+The `Small` component is extended from `Typography` component, that makes the writing codes are maintainable and clean. The `Typography` component is only imported once, without specify which variant of the typography that want to use. You can specify the `size` prop to determine which heading size you want (`base` and `sm`) and also `as` prop to determine the HTML tag that fits to the application.
+
+<Source code={`
+import Typography from "@/components/Typography";
+
+export const MyComponent = () => (
+  <div>
+    <Typography.Small level="base" as="p">
+      This is a small text with the default size
+    </Typography.Small>
+    // Other content
+  </div>
+);
+`} />
+
+## Default Styling
+
+The default styles of the `Small` component contains of the font family of the text by using **Poppins**, the font weight using `normal`, and `140%` line height.
+
+```css
+font-family: "Poppins", sans-serif;
+font-weight: 400;
+font-size: 0.75rem; // 12px as default size
+line-height: 140%;
+```
+
+<div style={{ textAlign: "right" }}>
+  [Variants](/docs/component-typography-small--variants) >
+</div>

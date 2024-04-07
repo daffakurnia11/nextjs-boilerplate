@@ -1,0 +1,62 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Display from "../../../components/Typography/Display";
+
+import * as DisplayStories from "./Display.stories";
+
+<Meta of={DisplayStories} />
+
+# Display Typography
+
+The `Display` component is designed to provide a consistent typography hierarchy across your application. This component generally allows the level of heading from `h1` to `h3`, but it can be changed for flexible usage in different contexts in the various levels of heading (from `h1` to `h6`, or other HTML Tag).
+
+<Canvas />
+<Controls />
+
+## Basic Usage
+
+The `Display` component can be used to insert text with heading styles into your application with different font family based on the font branding of the application. It's crucial for maintaining a semantic and accessible document structure.
+
+<Source
+  code={`
+<Typography.Display
+  size="lg"
+  as="h1"
+  className="text-black"
+  styles={{ textAlign: "center" }}
+>
+  This is an H1 Display Heading
+</Typography.Display>
+`}
+/>
+
+## How to Use the Component
+
+The `Display` component is extended from `Typography` component, that makes the writing codes are maintainable and clean. The `Typography` component is only imported once, without specify which variant of the typography that want to use. You can specify the `size` prop to determine which heading size you want (`lg`, `base`, `sm`) and also `as` prop to determine the hierarchy (from `h1` to `h6`).
+
+<Source code={`
+import Typography from "@/components/Typography";
+
+export const MyComponent = () => (
+  <div>
+    <Typography.Display size="lg" as="h1">
+      This is an H1 Display Heading with large size
+    </Typography.Display>
+    // Other content
+  </div>
+);
+`} />
+
+## Default Styling
+
+The default styles of the `Display` component contains of the font family of the text by using **Merriweather**, the font weight using `bold`, and `140%` line height.
+
+```css
+font-family: "Merriweather", serif;
+font-weight: 700;
+font-size: 3rem; // 48px for default base size
+line-height: 140%;
+```
+
+<div style={{ textAlign: "right" }}>
+  [Variants](/docs/component-typography-display--variants) >
+</div>

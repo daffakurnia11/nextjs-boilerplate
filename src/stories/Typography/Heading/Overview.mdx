@@ -1,0 +1,62 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import Heading from "../../../components/Typography/Heading";
+
+import * as HeadingStories from "./Heading.stories";
+
+<Meta of={HeadingStories} />
+
+# Heading Typography
+
+The `Heading` component is designed to provide a consistent typography hierarchy across your application. This component generally allows the level of heading from `h1` to `h6` for flexible usage in different contexts in the various levels of heading.
+
+<Canvas />
+<Controls />
+
+## Basic Usage
+
+The `Heading` component can be used to insert text with heading styles into your application. It's crucial for maintaining a semantic and accessible document structure.
+
+<Source
+  code={`
+<Typography.Heading
+  level="1"
+  as="h1"
+  className="text-black"
+  styles={{ textAlign: "center" }}
+>
+  This is an H1 Heading
+</Typography.Heading>
+`}
+/>
+
+## How to Use the Component
+
+The `Heading` component is extended from `Typography` component, that makes the writing codes are maintainable and clean. The `Typography` component is only imported once, without specify which variant of the typography that want to use. You can specify the `level` prop to determine which heading size you want (from `1` to `6`) and also `as` prop to determine the hierarchy (from `h1` to `h6`).
+
+<Source code={`
+import Typography from "@/components/Typography";
+
+export const MyComponent = () => (
+  <div>
+    <Typography.Heading level="1" as="h1">
+      This is an H1 Heading with large size
+    </Typography.Heading>
+    // Other content
+  </div>
+);
+`} />
+
+## Default Styling
+
+The default styles of the `Heading` component contains of the font family of the text by using **Poppins**, the font weight using `semi-bold`, and `140%` line height.
+
+```css
+font-family: "Poppins", sans-serif;
+font-weight: 600;
+font-size: 2rem; // 32px for default level 1 size
+line-height: 140%;
+```
+
+<div style={{ textAlign: "right" }}>
+  [Variants](/docs/component-typography-heading--variants) >
+</div>
