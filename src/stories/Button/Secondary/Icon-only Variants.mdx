@@ -1,0 +1,53 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+
+import * as ComponentStories from "./Docs.stories";
+
+<Meta of={ComponentStories} />
+
+# Secondary Button
+
+## Icon-only Variants
+
+Type `Secondary` button also supports the icon-only type of the using `iconOnly` property that sets to be `true`. This component has a different padding style and only supports for the icon label. The `size` and the `type` properties can also be added to ensure it fits for the design requirements.
+
+### Default Button
+
+This section showcases an example of the `Secondary` button component in `iconOnly` state at `default` button type that has a background color and border color that using `.bg-secondary-700` and `.border-secondary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={ComponentStories.IconOnlyDefault} />
+
+<Source
+  code={`
+<Button.Secondary iconOnly={true} size="lg" type="default">
+  <AiOutlinePlus />
+</Button.Secondary>
+`}
+/>
+
+### Outline Button
+
+This section showcases an example of the `Secondary` button component in `iconOnly` state at `outline` button type that has a transparent background color and border color that using `.bg-transparent` and `.border-secondary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={ComponentStories.IconOnlyOutline} />
+
+<Source
+  code={`
+<Button.Secondary iconOnly={true} size="lg" type="outline">
+  <AiOutlinePlus />
+</Button.Secondary>
+`}
+/>
+
+### Text-only Button
+
+This section showcases an example of the `Secondary` button component in `iconOnly` state at `text` button type that has a transparent background color and transparent border color that using `.bg-transparent` and `.border-transparent` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={ComponentStories.IconOnlyTextOnly} />
+
+<Source
+  code={`
+<Button.Secondary iconOnly={true} size="lg" type="text">
+  <AiOutlinePlus />
+</Button.Secondary>
+`}
+/>

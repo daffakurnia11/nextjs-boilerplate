@@ -1,10 +1,8 @@
 import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
-import Primary from "../../../components/Button/Primary";
 
-import * as PrimaryStories from "./Primary.stories";
-import { Small } from "../../Typography/Display/Display.stories";
+import * as ComponentStories from "./Docs.stories";
 
-<Meta of={PrimaryStories} />
+<Meta of={ComponentStories} />
 
 # Primary Button
 
@@ -16,7 +14,7 @@ Type `Primary` button also supports the icon-only type of the using `iconOnly` p
 
 This section showcases an example of the `Primary` button component in `iconOnly` state at `default` button type that has a background color and border color that using `.bg-primary-700` and `.border-primary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
 
-<Canvas of={PrimaryStories.IconOnlyDefault} />
+<Canvas of={ComponentStories.IconOnlyDefault} />
 
 <Source
   code={`
@@ -30,7 +28,7 @@ This section showcases an example of the `Primary` button component in `iconOnly
 
 This section showcases an example of the `Primary` button component in `iconOnly` state at `outline` button type that has a transparent background color and border color that using `.bg-transparent` and `.border-primary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
 
-<Canvas of={PrimaryStories.IconOnlyOutline} />
+<Canvas of={ComponentStories.IconOnlyOutline} />
 
 <Source
   code={`
@@ -44,7 +42,7 @@ This section showcases an example of the `Primary` button component in `iconOnly
 
 This section showcases an example of the `Primary` button component in `iconOnly` state at `text` button type that has a transparent background color and transparent border color that using `.bg-transparent` and `.border-transparent` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
 
-<Canvas of={PrimaryStories.IconOnlyTextOnly} />
+<Canvas of={ComponentStories.IconOnlyTextOnly} />
 
 <Source
   code={`

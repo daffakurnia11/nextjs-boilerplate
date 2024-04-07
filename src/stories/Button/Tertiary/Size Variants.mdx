@@ -1,0 +1,57 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+
+import * as ComponentStories from "./Docs.stories";
+
+<Meta of={ComponentStories} />
+
+# Tertiary Button
+
+## Size Variants
+
+The `Tertiary` button supports different sizes to ensure it fits various contexts and design requirements. Each size variant adjusts padding, maintaining the button's visual balance and clickability. The available variants are `lg`, `base`, and `sm`.
+
+### Button Large
+
+This section showcases an example of the `Tertiary` button component at size `lg`, along with its default styling. This variant has a 10px vertical padding and 24px horizontal padding using `.py-2.5` and `.px-6` class based on **TailwindCSS** class name.
+
+<Canvas of={ComponentStories.Large} />
+
+<Source
+  code={`
+<Button.Tertiary size="lg">
+  Button
+</Button.Tertiary>
+`}
+/>
+
+### Button Base
+
+This section showcases an example of the `Tertiary` button component at size `base`, along with its default styling. This variant has a 8px vertical padding and 20px horizontal padding using `.py-2` and `.px-5` class based on **TailwindCSS** class name.
+
+<Canvas of={ComponentStories.Base} />
+
+<Source
+  code={`
+<Button.Tertiary size="base">
+  Button
+</Button.Tertiary>
+`}
+/>
+
+### Button Small
+
+This section showcases an example of the `Tertiary` button component at size `sm`, along with its default styling. This variant has a 6px vertical padding and 12px horizontal padding using `.py-1.5` and `.px-3` class based on **TailwindCSS** class name.
+
+<Canvas of={ComponentStories.Small} />
+
+<Source
+  code={`
+<Button.Tertiary size="sm">
+  Button
+</Button.Tertiary>
+`}
+/>
+
+<div style={{ textAlign: "right" }}>
+  [3 - Icon Placements](/docs/component-button-tertiary--3-icon-placements) >
+</div>

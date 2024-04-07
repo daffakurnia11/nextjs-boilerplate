@@ -1,0 +1,86 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+
+import * as ComponentStories from "./Docs.stories";
+
+<Meta of={ComponentStories} />
+
+# Secondary Button
+
+## Icon Placements
+
+The `Secondary` button also supports for placing additional icon in the label of the button. The placement can be added as the prefix icon or suffix icon. This component supports the **React Icons** library for generating the icon and puts into the `prefix` and/or `suffix` properties.
+
+### With Prefix Icon
+
+This section showcases an example of the `Secondary` button component with `prefix` prop, along with its icon from **React Icons** library. The placement of the icon is in the front of the label of the button.
+
+<Canvas of={ComponentStories.WithPrefixIcon} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" prefix={<AiOutlinePlus />}>
+  Prefix Icon
+</Button.Secondary>
+`}
+/>
+
+### With Suffix Icon
+
+This section showcases an example of the `Secondary` button component with `suffix` prop, along with its icon from **React Icons** library. The placement of the icon is in the end of the label of the button.
+
+<Canvas of={ComponentStories.WithSuffixIcon} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" suffix={<AiOutlinePlus />}>
+  Suffix Icon
+</Button.Secondary>
+`}
+/>
+
+### With Prefix and Suffix Icon
+
+This section showcases an example of the `Secondary` button component with `prefix` and `suffix` props, along with its icon from **React Icons** library. The placement of the icon is in the front and the end of the label of the button.
+
+<Canvas of={ComponentStories.WithPrefixAndSuffixIcon} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" prefix={<AiOutlinePlus />} suffix={<AiOutlinePlus />}>
+  Prefix & Suffix Icon
+</Button.Secondary>
+`}
+/>
+
+### Icon in Center
+
+This section showcases an example of the `Secondary` button component with `fullWidth` prop to determine the button has a full width size, and `placement` props to configure the placement of the icon. The placement of the icon is in the center which are positioned near the label of the button.
+
+<Canvas of={ComponentStories.IconInCenter} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" fullWidth={true} placement="center" prefix={<AiOutlinePlus />} suffix={<AiOutlinePlus />}>
+  Center Icon
+</Button.Secondary>
+`}
+/>
+
+### Icon in Between
+
+This section showcases an example of the `Secondary` button component with `fullWidth` prop to determine the button has a full width size, and `placement` props to configure the placement of the icon. The placement of the icon is in the left or right of the button which are positioned far from the label of the button.
+
+<Canvas of={ComponentStories.IconInBetween} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" fullWidth={true} placement="between" prefix={<AiOutlinePlus />} suffix={<AiOutlinePlus />}>
+  Center Icon
+</Button.Secondary>
+`}
+/>
+
+<div style={{ textAlign: "right" }}>
+  [4 - Button Type
+  Variants](/docs/component-button-secondary--4-button-type-variants) >
+</div>

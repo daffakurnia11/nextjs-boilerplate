@@ -1,10 +1,8 @@
 import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
-import Primary from "../../../components/Button/Primary";
 
-import * as PrimaryStories from "./Primary.stories";
-import { Small } from "../../Typography/Display/Display.stories";
+import * as ComponentStories from "./Docs.stories";
 
-<Meta of={PrimaryStories} />
+<Meta of={ComponentStories} />
 
 # Primary Button
 
@@ -16,7 +14,7 @@ The `Primary` button supports different sizes to ensure it fits various contexts
 
 This section showcases an example of the `Primary` button component at size `lg`, along with its default styling. This variant has a 10px vertical padding and 24px horizontal padding using `.py-2.5` and `.px-6` class based on **TailwindCSS** class name.
 
-<Canvas of={PrimaryStories.Large} />
+<Canvas of={ComponentStories.Large} />
 
 <Source
   code={`
@@ -30,7 +28,7 @@ This section showcases an example of the `Primary` button component at size `lg`
 
 This section showcases an example of the `Primary` button component at size `base`, along with its default styling. This variant has a 8px vertical padding and 20px horizontal padding using `.py-2` and `.px-5` class based on **TailwindCSS** class name.
 
-<Canvas of={PrimaryStories.Base} />
+<Canvas of={ComponentStories.Base} />
 
 <Source
   code={`
@@ -44,7 +42,7 @@ This section showcases an example of the `Primary` button component at size `bas
 
 This section showcases an example of the `Primary` button component at size `sm`, along with its default styling. This variant has a 6px vertical padding and 12px horizontal padding using `.py-1.5` and `.px-3` class based on **TailwindCSS** class name.
 
-<Canvas of={PrimaryStories.Small} />
+<Canvas of={ComponentStories.Small} />
 
 <Source
   code={`
@@ -55,5 +53,5 @@ This section showcases an example of the `Primary` button component at size `sm`
 />
 
 <div style={{ textAlign: "right" }}>
-  [Icon Placements](/docs/component-button-primary--icon-placements) >
+  [3 - Icon Placements](/docs/component-button-primary--3-icon-placements) >
 </div>

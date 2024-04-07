@@ -69,3 +69,69 @@
 .button-text.button-primary:active span {
   @apply text-primary-900;
 }
+
+/* Secondary Color Style */
+.button.button-secondary {
+  @apply border-secondary-700 bg-secondary-700 enabled:hover:border-secondary-800 enabled:hover:bg-secondary-800 enabled:active:border-secondary-900 enabled:active:bg-secondary-900;
+}
+
+.button-outline.button-secondary {
+  @apply border-secondary-700 bg-transparent enabled:hover:border-secondary-500 enabled:hover:bg-secondary-500 enabled:active:border-secondary-700 enabled:active:bg-transparent;
+}
+
+.button-text.button-secondary {
+  @apply border-transparent bg-transparent enabled:hover:border-transparent enabled:hover:bg-transparent enabled:active:border-transparent enabled:active:bg-transparent;
+}
+
+/* Text Color */
+.button.button-secondary span,
+.button-outline.button-secondary:hover span {
+  @apply text-white;
+}
+
+.button-outline.button-secondary span,
+.button-outline.button-secondary:active span,
+.button-text.button-secondary span {
+  @apply text-secondary-700;
+}
+
+.button-text.button-secondary:hover span {
+  @apply text-secondary-800;
+}
+
+.button-text.button-secondary:active span {
+  @apply text-secondary-900;
+}
+
+/* Tertiary Color Style */
+.button.button-tertiary {
+  @apply border-tertiary-700 bg-tertiary-700 enabled:hover:border-tertiary-800 enabled:hover:bg-tertiary-800 enabled:active:border-tertiary-900 enabled:active:bg-tertiary-900;
+}
+
+.button-outline.button-tertiary {
+  @apply border-tertiary-700 bg-transparent enabled:hover:border-tertiary-500 enabled:hover:bg-tertiary-500 enabled:active:border-tertiary-700 enabled:active:bg-transparent;
+}
+
+.button-text.button-tertiary {
+  @apply border-transparent bg-transparent enabled:hover:border-transparent enabled:hover:bg-transparent enabled:active:border-transparent enabled:active:bg-transparent;
+}
+
+/* Text Color */
+.button.button-tertiary span,
+.button-outline.button-tertiary:hover span {
+  @apply text-white;
+}
+
+.button-outline.button-tertiary span,
+.button-outline.button-tertiary:active span,
+.button-text.button-tertiary span {
+  @apply text-tertiary-700;
+}
+
+.button-text.button-tertiary:hover span {
+  @apply text-tertiary-800;
+}
+
+.button-text.button-tertiary:active span {
+  @apply text-tertiary-900;
+}

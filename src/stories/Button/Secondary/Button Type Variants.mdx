@@ -1,0 +1,58 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+
+import * as ComponentStories from "./Docs.stories";
+
+<Meta of={ComponentStories} />
+
+# Secondary Button
+
+## Button Type Variants
+
+The `Secondary` button also has some types to ensure it fits the design requirements of the application. The type can be as `default` button that has a background color and border color, `outline` button that only has a border color, and `text` button that does not have a background color and border color.
+
+### Default Button
+
+This section showcases an example of the `Secondary` button component at `default` button type that has a background color and border color using `.bg-secondary-700` and `.border-secondary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={ComponentStories.ButtonDefault} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" type="default">
+  Button Default
+</Button.Secondary>
+`}
+/>
+
+### Outline Button
+
+This section showcases an example of the `Secondary` button component at `outline` button type that has a transparent background color and border color that using `.bg-transparent` and `.border-secondary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={ComponentStories.ButtonOutline} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" type="outline">
+  Button Outline
+</Button.Secondary>
+`}
+/>
+
+### Text-only Button
+
+This section showcases an example of the `Secondary` button component at `text` button type that has a transparent background color and transparent border color that using `.bg-transparent` and `.border-transparent` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+<Canvas of={ComponentStories.ButtonTextOnly} />
+
+<Source
+  code={`
+<Button.Secondary size="lg" type="text">
+  Button Text Only
+</Button.Secondary>
+`}
+/>
+
+<div style={{ textAlign: "right" }}>
+  [5 - Icon-only
+  Variants](/docs/component-button-secondary--5-icon-only-variants) >
+</div>

@@ -1,10 +1,8 @@
 import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
-import Primary from "../../../components/Button/Primary";
 
-import * as PrimaryStories from "./Primary.stories";
-import { Small } from "../../Typography/Display/Display.stories";
+import * as ComponentStories from "./Docs.stories";
 
-<Meta of={PrimaryStories} />
+<Meta of={ComponentStories} />
 
 # Primary Button
 
@@ -16,7 +14,7 @@ The `Primary` button also has some types to ensure it fits the design requiremen
 
 This section showcases an example of the `Primary` button component at `default` button type that has a background color and border color using `.bg-primary-700` and `.border-primary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
 
-<Canvas of={PrimaryStories.ButtonDefault} />
+<Canvas of={ComponentStories.ButtonDefault} />
 
 <Source
   code={`
@@ -30,7 +28,7 @@ This section showcases an example of the `Primary` button component at `default`
 
 This section showcases an example of the `Primary` button component at `outline` button type that has a transparent background color and border color that using `.bg-transparent` and `.border-primary-700` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
 
-<Canvas of={PrimaryStories.ButtonOutline} />
+<Canvas of={ComponentStories.ButtonOutline} />
 
 <Source
   code={`
@@ -44,7 +42,7 @@ This section showcases an example of the `Primary` button component at `outline`
 
 This section showcases an example of the `Primary` button component at `text` button type that has a transparent background color and transparent border color that using `.bg-transparent` and `.border-transparent` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
 
-<Canvas of={PrimaryStories.ButtonTextOnly} />
+<Canvas of={ComponentStories.ButtonTextOnly} />
 
 <Source
   code={`
@@ -55,5 +53,6 @@ This section showcases an example of the `Primary` button component at `text` bu
 />
 
 <div style={{ textAlign: "right" }}>
-  [Icon-only Variants](/docs/component-button-primary--icon-only-variants) >
+  [5 - Icon-only Variants](/docs/component-button-primary--5-icon-only-variants)
+  >
 </div>

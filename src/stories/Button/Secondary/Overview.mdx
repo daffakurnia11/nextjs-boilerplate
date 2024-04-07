@@ -1,0 +1,105 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+
+import * as ComponentStories from "./Docs.stories";
+
+<Meta of={ComponentStories} />
+
+# Secondary Button
+
+The `Secondary` button is a component for creating the secondary button of the application. It is designed to get users' attention and call them to take actions. The usage is very general, could be as the form submission, calling any actions, triggering any modals or popups, and other interactive elements of the application.
+
+<Canvas />
+<Controls />
+
+## Basic Usage
+
+The `Secondary` button can be easily implemented within your application to facilitate main actions. Its usage is straightforward, supporting different sizes (`lg`, `base`, and `sm`) and states (like `disabled` or `fullWidth`), and allowing to add an icon inside of the button to accommodate various design needs and increase the user experience.
+
+<Source
+  code={`
+<Button.Secondary size="base" type="default">
+  Button
+</Button.Secondary>
+`}
+/>
+
+## How to Use the Component
+
+The `Secondary` button is extended from `Button` component, that makes the writing code is maintainable and clean. The `Button` component is only imported once, without specify which variant of the button that want to use. You can give the label of the button and also the additional properties such as `size`, `type`, `disabled`, `fullWidth` or anything else.
+
+<Source code={`
+import Button from "@/components/Button";
+
+export const MyComponent = () => (
+  <div>
+    <Button.Secondary
+      size="base"
+      type="default"
+      disabled={false}
+      fullWidth={false}
+    >
+      Button
+    </Button.Secondary>
+    // Other content
+  </div>
+);
+`} />
+
+## Default Styling
+
+The default styles of the `Secondary` button contains of the placement of the label, padding of the button, and the style of the border. It also supports the transition effects for hovering and clicking.
+
+```css
+display: flex;
+align-items: center;
+justify-content: center;
+
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 300ms;
+
+border-radius: 0.25rem;
+border-width: 1px;
+border-style: solid;
+```
+
+### Secondary Button Styling
+
+The `Secondary` button has a default background color and default border color for standardize the style of the button. Generally, the `Secondary` button used the `.bg-secondary-700` and `.border-secondary-700` class from **TailwindCSS** for adding the color based, as specified in `tailwind.config.ts`.
+
+```css
+border-color: #1d4ed8;
+background-color: #1d4ed8;
+```
+
+### Secondary Button Hovered Styling
+
+While hovering, the color is changed to be darker using `.bg-secondary-800` and `.border-secondary-800` class from **TailwindCSS**, as specified in `tailwind.config.ts`.
+
+```css
+border-color: #1e40af;
+background-color: #1e40af;
+```
+
+### Secondary Button Active Styling
+
+While being pressed, the color is changed to be darker than before using `.bg-secondary-900` and `.border-secondary-900` class from **TailwindCSS**, as specified in `tailwind.config.ts`. There is also an outline color that using `.ring-secondary-300`.
+
+```css
+border-color: #1e3a8a;
+background-color: #1e3a8a;
+```
+
+### Secondary Button Disabled Styling
+
+While the button has a disabled state, the opacity of the button has been changed to be 70% from the solid style.
+
+```css
+border-color: #1d4ed8;
+background-color: #1d4ed8;
+opacity: 0.7;
+```
+
+<div style={{ textAlign: "right" }}>
+  [2 - Size variants](/docs/component-button-secondary--2-size-variants) >
+</div>
