@@ -4,6 +4,11 @@ import "../src/styles/tailwind.css";
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: ["Typography", "Button", "*"]
+      }
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

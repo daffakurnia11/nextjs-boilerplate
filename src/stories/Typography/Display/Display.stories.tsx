@@ -2,7 +2,7 @@ import Display from "../../../components/Typography/Display";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Display> = {
-  title: "Component/Typography/Display",
+  title: "Typography/Display",
   component: Display,
   argTypes: {
     size: {
