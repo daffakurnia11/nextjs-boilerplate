@@ -1,14 +1,14 @@
 import { AiOutlinePlus } from "react-icons/ai";
-import Button from "../../../components/Button";
+import Secondary from "../../../components/Button/Secondary";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Button.Tertiary> = {
-  title: "Button/Tertiary",
-  component: Button.Tertiary,
+const meta: Meta<typeof Secondary> = {
+  title: "Button/Secondary",
+  component: Secondary,
 };
 
 export default meta;
-type Story = StoryObj<typeof Button.Tertiary>;
+type Story = StoryObj<typeof Secondary>;
 
 export const Example: Story = {
   args: {
@@ -94,7 +94,7 @@ export const IconInCenter: Story = {
   },
   render: (args) => (
     <div style={{ width: 400 }}>
-      <Button.Tertiary {...args} />
+      <Secondary {...args} />
     </div>
   ),
 };
@@ -110,7 +110,7 @@ export const IconInBetween: Story = {
   },
   render: (args) => (
     <div style={{ width: 400 }}>
-      <Button.Tertiary {...args} />
+      <Secondary {...args} />
     </div>
   ),
 };

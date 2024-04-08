@@ -1,56 +1,6 @@
-import type {
-  ButtonProps,
-  GeneralButtonProps,
-} from "@/types/components/Button";
-
-function GeneralButton({
-  variant,
-  children,
-  size = "base",
-  type = "default",
-  iconOnly = false,
-  disabled = false,
-  fullWidth = false,
-  as = "button",
-  prefix,
-  suffix,
-  placement = "center",
-  className = "",
-  ...props
-}: GeneralButtonProps): React.ReactElement {
-  const Component = as;
-  const typeClass = {
-    default: "",
-    outline: "button-outline",
-    text: "button-text",
-  };
-
-  return (
-    <>
-      <Component
-        className={`button ${iconOnly ? "button-icon" : ""} ${typeClass[type]} justify-${placement} button-${size} button-${variant} ${className} ${fullWidth ? "w-full" : ""}`}
-        disabled={disabled}
-        {...props}
-      >
-        {!iconOnly && <span className={`text-${size}`}>{prefix}</span>}
-        <span className={`text-${size}`}>{children}</span>
-        {!iconOnly && <span className={`text-${size}`}>{suffix}</span>}
-      </Component>
-    </>
-  );
-}
-
-function Primary({ ...props }: ButtonProps): React.ReactElement {
-  return <GeneralButton variant="primary" {...props} />;
-}
-
-function Secondary({ ...props }: ButtonProps): React.ReactElement {
-  return <GeneralButton variant="secondary" {...props} />;
-}
-
-function Tertiary({ ...props }: ButtonProps): React.ReactElement {
-  return <GeneralButton variant="tertiary" {...props} />;
-}
+import Primary from "./Primary";
+import Secondary from "./Secondary";
+import Tertiary from "./Tertiary";
 
 const Button = {
   /**

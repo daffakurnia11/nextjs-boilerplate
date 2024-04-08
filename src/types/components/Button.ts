@@ -53,7 +53,3 @@ export interface ButtonProps {
    */
   onClick?: () => void;
 }
-
-export interface GeneralButtonProps extends ButtonProps {
-  variant: "primary" | "secondary" | "tertiary";
-}
