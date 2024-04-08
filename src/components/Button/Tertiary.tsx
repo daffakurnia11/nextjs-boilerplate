@@ -55,7 +55,7 @@ export default function Tertiary({
   return (
     <>
       <Component
-        className={`button ${iconOnly ? "button-icon" : ""} ${typeClass[type]} justify-${placement} button-${size} button-secondary ${className} ${fullWidth ? "w-full" : ""}`}
+        className={`button ${iconOnly ? "button-icon" : ""} ${typeClass[type]} justify-${placement} button-${size} button-tertiary ${className} ${fullWidth ? "w-full" : ""}`}
         disabled={disabled}
         {...props}
       >
