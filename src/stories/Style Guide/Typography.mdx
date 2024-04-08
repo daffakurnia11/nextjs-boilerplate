@@ -1,0 +1,198 @@
+import { Meta, Typeset } from "@storybook/blocks";
+
+<Meta title="Style Guide/Typography" />
+
+# Typography
+
+Typography serves as the foundation for creating a consistent look and feel across the design system. It encompasses a variety of typefaces, font weights, and font sizes carefully selected to enhance readability and visual coherence. Just as a well-curated color palette ensures a cohesive user interface, our typography choices contribute to the overall harmony of the design system. Additionally, our typography settings streamline the configuration process of the `tailwind.config.ts` file, simplifying setup and enhancing efficiency.
+
+export const typography = {
+  type: {
+    display: '"Merriweather", serif',
+    text: '"Poppins", sans-serif',
+  },
+  weight: {
+    thin: 100,
+    extralight: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900,
+  },
+  fontSize: {
+    "8xl": 56,
+    "7xl": 48,
+    "6xl": 36,
+    "5xl": 32,
+    "4xl": 30,
+    "3xl": 28,
+    "2xl": 24,
+    xl: 20,
+    lg: 18,
+    base: 16,
+    sm: 14,
+    xs: 12,
+    "2xs": 10,
+  },
+};
+
+export const SampleText = "Typography";
+
+## Font Size
+
+**Typeface**: Merriweather, serif<br />
+**Weights**: 300 (light), 400 (normal), 700 (bold), 900 (black)
+
+<Typeset
+  fontSizes={[
+    Number(typography.fontSize["8xl"]),
+    Number(typography.fontSize["7xl"]),
+    Number(typography.fontSize["6xl"]),
+    Number(typography.fontSize["5xl"]),
+    Number(typography.fontSize["4xl"]),
+    Number(typography.fontSize["3xl"]),
+    Number(typography.fontSize["2xl"]),
+    Number(typography.fontSize["xl"]),
+    Number(typography.fontSize["lg"]),
+    Number(typography.fontSize["base"]),
+    Number(typography.fontSize["sm"]),
+    Number(typography.fontSize["xs"]),
+    Number(typography.fontSize["2xs"]),
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.display}
+/>
+
+**Typeface**: Poppins, sans-serif<br />
+**Weights**: 100 (thin), 200 (extra-light), 300 (light), 400 (normal), 500 (medium), 600 (semi-bold) 700 (bold), 800 (extra-bold), 900 (black)
+
+<Typeset
+  fontSizes={[
+    Number(typography.fontSize["8xl"]),
+    Number(typography.fontSize["7xl"]),
+    Number(typography.fontSize["6xl"]),
+    Number(typography.fontSize["5xl"]),
+    Number(typography.fontSize["4xl"]),
+    Number(typography.fontSize["3xl"]),
+    Number(typography.fontSize["2xl"]),
+    Number(typography.fontSize["xl"]),
+    Number(typography.fontSize["lg"]),
+    Number(typography.fontSize["base"]),
+    Number(typography.fontSize["sm"]),
+    Number(typography.fontSize["xs"]),
+    Number(typography.fontSize["2xs"]),
+  ]}
+  fontWeight={typography.weight.normal}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+Below is a comprehensive breakdown of the **TailwindCSS** class names configured within this application, along with their corresponding font sizes, values in pixels, and associated line heights, as specified in `tailwind.config.ts`:
+
+<table>
+  <thead>
+    <tr>
+      <th>TailwindCSS Class Name</th>
+      <th>Font Size in PX</th>
+      <th>Font Size in REM</th>
+      <th>Line Height</th>
+    </tr>
+  </thead>
+  <tbody>
+    {Object.entries(typography.fontSize).map(([size, value]) => (
+      <tr key={size}>
+        <td>text-{size}</td>
+        <td>{value}px</td>
+        <td>{value / 16}rem</td>
+        <td>140%</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Font Weight
+
+This section showcases an example of typography using `100` weight by using `font-thin` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.thin}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `200` weight by using `font-extralight` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.extralight}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `300` weight by using `font-light` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.light}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `400` weight by using `font-normal` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.normal}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `500` weight by using `font-medium` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.medium}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `600` weight by using `font-semibold` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.semibold}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `700` weight by using `font-bold` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `800` weight by using `font-extrabold` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.extrabold}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>
+
+This section showcases an example of typography using `900` weight by using `font-black` class based on **TailwindCSS** class name.
+
+<Typeset
+  fontSizes={[Number(typography.fontSize["base"])]}
+  fontWeight={typography.weight.black}
+  sampleText={SampleText}
+  fontFamily={typography.type.text}
+/>

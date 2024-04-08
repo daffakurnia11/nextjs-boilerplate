@@ -6,7 +6,7 @@ const preview: Preview = {
   parameters: {
     options: {
       storySort: {
-        order: ["Typography", "Button", "*"]
+        order: ["Style Guide", "Typography", "Button", "*"]
       }
     },
     controls: {
