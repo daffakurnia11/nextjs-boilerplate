@@ -1,0 +1,14 @@
+version: '3'
+services:
+  meals-dashboard:
+    container_name: meals-dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PORT=${PORT:-3000}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
