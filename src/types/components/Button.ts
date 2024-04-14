@@ -20,6 +20,14 @@ export interface ButtonProps {
    */
   type?: "default" | "outline" | "text";
   /**
+   * The HTML type of the button. Can be submit, reset, or button. Default is button. - Optional
+   */
+  buttonType?: "submit" | "reset" | "button" | any;
+  /**
+   * The tabIndex of the button. Default is 0. - Optional
+   */
+  tabIndex?: number;
+  /**
    * Whether the Button component should only contain an icon. Default is false. - Optional
    */
   iconOnly?: boolean;

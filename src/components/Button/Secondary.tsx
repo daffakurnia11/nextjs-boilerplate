@@ -7,8 +7,12 @@ import type { ButtonProps } from "@/types/components/Button";
  * - The content of the component for the Button component. - Required
  * @param {base|sm} [size='base']
  * - The size of the Button component. Can be lg, base or sm. Default is base. - Optional
- * @param {default|outline|text} [type='default']
+ * @param {"default"|"outline"|"text"} [type='default']
  * - The type of the Button component. Can be default, outline, or text. Default is default. - Optional
+ * @param {"submit"|"reset"|"button"} [buttonType]
+ * - The HTML type of the button. Can be submit, reset, or button. Default is button. - Optional
+ * @param {number} [tabIndex=0]
+ * - The tabIndex of the button. Default is 0. - Optional
  * @param {boolean} [iconOnly=false]
  * - Whether the Button component should only contain an icon. Default is false. - Optional
  * @param {boolean} [disabled=false]
