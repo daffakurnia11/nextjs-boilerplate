@@ -1,0 +1,46 @@
+import { Canvas, Controls, Meta, Source, Stories } from "@storybook/blocks";
+import * as InputStories from "./Input.stories";
+
+<Meta of={InputStories} />
+
+# Input Text
+
+The `Input.Text` component is designed to provide a consistent text input style across your application. This component requires the `FormGroup` component for handling the value of input component and also has various properties for flexible usage in different contexts or styles of the application.
+
+<Canvas />
+<Controls />
+
+## Basic Usage
+
+The `Input.Text` component can be used to create a text input component into your application and wrapped by `FormGroup` component in a various style and configuration. It's crucial for maintaining a sematic and accessible document structure.
+
+<Source
+  code={`
+<Input.Text name="email" size="base" label="Email" />
+`}
+/>
+
+## How to Use the Component
+
+The `Input.Text` component is extended from `Input` component, that makes the writing codes are maintainable and clean. The `Input` component is only imported once, without specify which type of input that want to use. You can specify the `size` prop to determine the size of the input component and provide the `name` prop to give the name of the input component. The `Input.Text` component also needs to write inside the `FormGroup` component for creating the form handler function.
+
+<Source code={`
+import FormGroup from "@/components/Input/FormGroup";
+import Input from "@/components/Input";
+
+export const MyComponent = () => {
+  return (
+    <FormGroup
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={onSubmit}
+    >
+      <Input.Text name="email" label="Email" placeholder="Enter your email" />
+    </FormGroup>
+  );
+}
+`} />
+
+<div style={{ textAlign: "right" }}>
+  [2 - Default Styling](/docs/form-input-text--2-default-styling) >
+</div>

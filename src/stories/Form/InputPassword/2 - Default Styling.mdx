@@ -1,0 +1,55 @@
+import { Meta } from "@storybook/blocks";
+import * as InputStories from "./Input.stories";
+
+<Meta of={InputStories} />
+
+# Input Password
+
+## Default Styling
+
+This section showcases the default styling of `Input.Password` component that contains of the styling of input, label, and helper text. The text color of the input uses `text-neutral-700`.
+
+### Input Styling
+
+The default styles of the input component contains of border, border radius, background color, text size, and also padding for creating the consistent of input style.
+
+```css
+margin: 0.5rem 0;
+padding: 0.625rem 0.75rem;
+border: 1px solid #d4d4d4;
+background-color: #ffffff;
+
+font-size: 0.875rem;
+line-height: 140%;
+color: #404040;
+```
+
+### Label Styling
+
+The default styles of the label basically uses `Typography.Paragraph` component with a `sm` size. The color of the label uses `text-neutral-700`.
+
+```css
+font-family: Poppins, sans-serif;
+font-weight: 400;
+font-size: 0.875rem;
+line-height: 140%;
+display: block;
+color: #404040;
+```
+
+### Helper Text Styling
+
+The default styles of the helper text basically uses `Typography.Paragraph` component with a `sm` size. The color of the helper text uses `text-neutral-500`.
+
+```css
+font-family: Poppins, sans-serif;
+font-weight: 400;
+font-size: 0.875rem;
+line-height: 140%;
+display: block;
+color: #737373;
+```
+
+<div style={{ textAlign: "right" }}>
+  [3 - Variants](/docs/form-input-password--3-variants) >
+</div>
