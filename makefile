@@ -1,0 +1,14 @@
+DOCKER_COMPOSE := docker-compose
+ENV_FILE := .env
+
+ifndef ENV_EXISTS
+$(shell if [ ! -f $(ENV_FILE) ]; then cp example.env $(ENV_FILE); fi)
+endif
+
+include $(ENV_FILE)
+
+.PHONY: dev
+
+dev:
+	$(DOCKER_COMPOSE) down --remove-orphans
+	$(DOCKER_COMPOSE) up --build
